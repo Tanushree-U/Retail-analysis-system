@@ -1,2 +1,57 @@
 # Retail-analysis-system
+
 Machine Learning based Retail Analysis web application that performs customer segmentation using K-Means clustering, sales forecasting using Linear regression and data visualization using Matplotlib
+
+## Project Overview
+
+The Retail Analysis System is developed to analyze retail transaction data using machine learning algorithms. It processes raw data, identifies customer groups based on purchasing patterns, and predicts future sales values using historical sales information. The system helps in understanding customer behavior and supports data-driven decision-making.
+
+## Features
+
+- Data preprocessing and cleaning to prepare datasets for analysis.
+- Customer segmentation using K-Means Clustering.
+- Sales forecasting using Linear Regression.
+- Data visualization through graphs for better understanding of results.
+- Automated workflow from data loading to result generation.
+- User-friendly interface for performing analysis.
+
+## Technologies Used
+
+### Programming Language
+- Python
+
+### Framework
+- Flask
+
+### Machine Learning Algorithms
+- K-Means Clustering
+- Linear Regression
+
+### Libraries
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+
+### Frontend Technologies
+- HTML
+
+## System Workflow
+
+1. Dataset is uploaded and loaded into the system.
+2. Data preprocessing is performed to handle missing values, duplicates, and formatting.
+3. Relevant features are selected for analysis.
+4. K-Means Clustering is applied to segment customers.
+5. Linear Regression is applied to forecast future sales.
+6. Results are displayed using visualizations.
+
+## Installation and Setup
+
+Follow the steps below to run the Retail Analysis System on your local machine.
+
+### 1. Clone the Repository
+
+Download the project from GitHub by cloning the repository:
+
+```bash
+git clone https://github.com/Tanushree-U/Retail-analysis-system.git
