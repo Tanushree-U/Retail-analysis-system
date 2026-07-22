@@ -119,5 +119,12 @@ Predicts future sales trends using Linear Regression based on historical sales d
 * Deployment on cloud platforms for public access.
 * Support for multiple datasets and real-time analytics.
 
+## Demo
+
+The project is deployed and available at
+```bash
+https://retail-analysis-system.onrender.com
+
+
 Author
 Tanushree U
