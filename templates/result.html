@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Results</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    /* <!-- background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); --> */
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.badge {
+    background: #667eea;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+button {
+    background: red;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2 style="color:white;">📊 Analysis Results</h2>
+
+<!-- Cluster Counts -->
+<div class="card">
+<h3>Cluster Counts</h3>
+{% for key, val in counts.items() %}
+<span class="badge">Cluster {{ key }}: {{ val }}</span>
+{% endfor %}
+</div>
+
+<!-- Interpretation -->
+<div class="card">
+<h3>Interpretation</h3>
+{% for item in interpretation %}
+<p>
+Cluster {{ item.cluster }} → {{ item.label }}
+(X={{ item.x }}, Y={{ item.y }})
+</p>
+{% endfor %}
+</div>
+
+<!-- Graphs -->
+<div class="grid">
+
+<div class="card">
+<h3>Cluster Graph</h3>
+<img src="/static/cluster.png">
+</div>
+
+<div class="card">
+<h3>Forecast Graph</h3>
+
+{% if forecast == "NOT_AVAILABLE" %}
+<p style="color:red;">Forecast not possible (No Date column)</p>
+
+{% elif forecast == "NO_AMOUNT" %}
+<p style="color:red;">Forecast not possible (No Total Amount column)</p>
+
+{% else %}
+<img src="/static/forecast.png">
+{% endif %}
+
+</div>
+
+</div>
+
+<!-- Forecast values -->
+{% if forecast not in ["NOT_AVAILABLE", "NO_AMOUNT"] %}
+<div class="card">
+<h3>Next 7 Days Forecast</h3>
+
+{% for f in forecast %}
+<p>{{ f.date }} → <b>{{ f.value }}</b></p>
+{% endfor %}
+</div>
+{% endif %}
+
+<!-- EXIT BUTTON -->
+<form method="POST" action="/shutdown">
+    <button>Exit Application</button>
+</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Select Columns</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    /* background: linear-gradient(135deg, #1f1c2c, #928dab); */
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+select, button {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button {
+    background: #667eea;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #5a67d8;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+<h2>Select Columns</h2>
+
+<form method="POST" action="/analyze">
+
+<label>X Column:</label><br>
+<select name="xcol">
+{% for col in columns %}
+<option value="{{ col }}">{{ col }}</option>
+{% endfor %}
+</select><br><br>
+
+<label>Y Column:</label><br>
+<select name="ycol">
+{% for col in columns %}
+<option value="{{ col }}">{{ col }}</option>
+{% endfor %}
+</select><br><br>
+
+<button type="submit">Analyze</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
