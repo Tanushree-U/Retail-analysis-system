@@ -124,7 +124,7 @@ Predicts future sales trends using Linear Regression based on historical sales d
 The project is deployed and available at
 ```bash
 https://retail-analysis-system.onrender.com
+```
 
-
-Author
+# Author
 Tanushree U
