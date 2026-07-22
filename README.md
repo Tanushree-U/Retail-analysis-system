@@ -93,6 +93,7 @@ The Retail Analysis System will now be available on your local machine.
 
 ## Project Structure
 
+```bash
 Retail-analysis-system/
 │
 ├── app.py
@@ -101,6 +102,7 @@ Retail-analysis-system/
 ├── static/
 ├── dataset/
 └── README.md
+```
 
 ## Results
 
