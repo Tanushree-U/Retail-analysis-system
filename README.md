@@ -55,3 +55,69 @@ Download the project from GitHub by cloning the repository:
 
 ```bash
 git clone https://github.com/Tanushree-U/Retail-analysis-system.git
+```
+
+### 2. Navigate to the Project Folder
+
+Open the project directory:
+
+```bash
+cd Retail-analysis-system
+```
+
+### 3. Install Required Dependencies
+
+Install all the required Python libraries using:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Application
+
+Start the Flask application:
+
+```bash
+python app.py
+```
+
+### 5. Access the Website
+
+Open a web browser and enter:
+
+```bash
+http://127.0.0.1:5000⁠�
+```
+
+The Retail Analysis System will now be available on your local machine.
+
+## Project Structure
+
+Retail-analysis-system/
+│
+├── app.py
+├── requirements.txt
+├── templates/
+├── static/
+├── dataset/
+└── README.md
+
+## Results
+
+### The system generates two major outputs:
+
+#### Customer Segmentation: 
+Groups customers into different segments based on their purchasing behavior using K-Means Clustering.
+
+#### Sales Forecasting: 
+Predicts future sales trends using Linear Regression based on historical sales data.
+
+## Future Enhancements
+* Integration with real-time retail databases and APIs.
+* Implementation of advanced machine learning models.
+* Development of a more interactive dashboard.
+* Deployment on cloud platforms for public access.
+* Support for multiple datasets and real-time analytics.
+
+Author
+Tanushree U
