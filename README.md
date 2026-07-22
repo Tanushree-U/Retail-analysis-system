@@ -1,2 +1,2 @@
 # Retail-analysis-system
-A Retail Analysis web application that performs customer segmentation, sales forecasting and data visualization using machine learning
+Machine Learning based Retail Analysis web application that performs customer segmentation using K-Means clustering, sales forecasting using Linear regression and data visualization using Matplotlib
